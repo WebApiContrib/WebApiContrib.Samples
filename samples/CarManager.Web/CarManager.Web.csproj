@@ -99,10 +99,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\WebApiContrib\WebApiContrib.csproj">
-      <Project>{C8EBEB5F-1664-4B36-9FA0-9979830EC5B8}</Project>
-      <Name>WebApiContrib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CarManager.Data\CarManager.Data.csproj">
       <Project>{E02C72E3-CD4C-4633-A91F-B49595A46182}</Project>
       <Name>CarManager.Data</Name>

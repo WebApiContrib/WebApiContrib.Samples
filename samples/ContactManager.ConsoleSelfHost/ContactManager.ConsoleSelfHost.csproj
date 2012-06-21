@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -78,10 +78,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\WebApiContrib.IoC.Ninject\WebApiContrib.IoC.Ninject.csproj">
-      <Project>{7AFAC6AB-9B5F-41B7-9AB7-84053FC19A7E}</Project>
-      <Name>WebApiContrib.IoC.Ninject</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ContactManager.APIs\ContactManager.APIs.csproj">
       <Project>{823DDCBC-F7BF-4AA6-A285-236FD482D40C}</Project>
       <Name>ContactManager.APIs</Name>
