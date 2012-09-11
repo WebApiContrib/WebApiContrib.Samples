@@ -22,14 +22,17 @@ namespace ContactManager.Web
             var serializerSettings = new JsonSerializerSettings();
             serializerSettings.Converters.Add(new IsoDateTimeConverter());
 
+            config.Filters.Add(new ExceptionHandlingAttribute());
+            config.Filters.Add(new ValidationAttribute());
+
             config.Formatters.Add(new ProtoBufFormatter()); 
             config.Formatters.Add(new ContactPngFormatter());
             config.Formatters.Add(new VCardFormatter());
             config.Formatters.Add(new ContactCalendarFormatter());
             
             config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));
-            
-            //var loggingRepo = config.ServiceResolver.GetService(typeof(ILoggingRepository)) as ILoggingRepository;
+
+            //var loggingRepo = (ILoggingRepository) config.DependencyResolver.GetService(typeof(ILoggingRepository));
             //config.MessageHandlers.Add(new LoggingHandler(loggingRepo));
 
             config.MessageHandlers.Add(new NotAcceptableMessageHandler(config));
@@ -54,7 +57,6 @@ namespace ContactManager.Web
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new ValidationAttribute());
         }
 
         protected void Application_Start()
